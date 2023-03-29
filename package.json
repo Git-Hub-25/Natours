@@ -8,7 +8,7 @@
     "reset": "node ./dev-data/data/import-data.js --reset",
     "debug": "ndb ./server.js",
     "watch:js": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file bundle.js",
-    "build:js": "npm instal && parcel build ./public/js/index.js --out-dir ./public/js --out-file bundle.js"
+    "build:js": "npm install && parcel build ./public/js/index.js --out-dir ./public/js --out-file bundle.js"
   },
   "author": "",
   "license": "ISC",
