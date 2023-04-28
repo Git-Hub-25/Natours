@@ -9,6 +9,12 @@ exports.login = catchAsync(async (req, res, next) => {
   });
 });
 
+exports.signup = catchAsync(async (req, res, next) => {
+  res.status(200).render('signup', {
+    title: 'Register Here',
+  });
+});
+
 exports.getOverview = catchAsync(async (req, res, next) => {
   const tours = await Tour.find();
   res.status(200).render("overview", {
