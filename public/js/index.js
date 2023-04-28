@@ -37,7 +37,7 @@ if (signUpForm) {
       'signup-passwordConfirm',
     ).value;
     const password = document.getElementById('signup-password').value;
-    console.log(password, username, email);
+
     signup(username, email, password, passwordConfirm);
   });
 }
