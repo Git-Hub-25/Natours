@@ -6,6 +6,7 @@ import { bookTour } from "./stripe";
 
 const mapBox = document.getElementById("map");
 const loginForm = document.querySelector(".form--login");
+const signUpForm = document.querySelector('.form-signup');
 const logoutBtn = document.querySelector(".nav__el--logout");
 const userPasswordForm = document.querySelector(".form-user-settings");
 const userDataForm = document.querySelector(".form-user-data");
@@ -25,6 +26,20 @@ if (loginForm)
     const password = document.getElementById("password").value;
     login(email, password);
   });
+
+if (signUpForm) {
+  signUpForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const email = document.getElementById('signup-email').value;
+    const username = document.getElementById('signup-username').value;
+    const passwordConfirm = document.getElementById(
+      'signup-passwordConfirm',
+    ).value;
+    const password = document.getElementById('signup-password').value;
+    console.log(password, username, email);
+    signup(username, email, password, passwordConfirm);
+  });
+}
 
 if (logoutBtn) logoutBtn.addEventListener("click", logout);
 
